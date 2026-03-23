@@ -1,0 +1,10 @@
+import "./styles/cards.css"
+import "./styles/form.css"
+import "./styles/home.css"
+import "./styles/edit.css"
+
+import "./modules/form/submit.js"
+import "./modules/taskList/show-task.js"
+import "./modules/taskList/load-task.js"
+import "./modules/taskList/change-date.js"
+import "./modules/load-page.js"

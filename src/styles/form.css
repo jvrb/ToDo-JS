@@ -1,0 +1,82 @@
+#formCreateTask {
+	min-width: 100%;
+	padding: 1rem;
+	border: 1px solid #097d57;
+	border-radius: 1rem;
+	box-shadow:
+		0 4px 8px 0 rgba(0, 0, 0, 0.2),
+		0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	z-index: 1;
+}
+
+#formCreateTask header {
+	margin-bottom: 1rem;
+}
+
+#formCreateTask header p {
+	display: flex;
+	align-items: center;
+}
+
+#formCreateTask .inputWraper , #editTask .inputWraper{
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+	margin-bottom: 0.5rem;
+}
+
+#formCreateTask .inputWraper p,
+#editTask .inputWraper p {
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+	color: #fff;
+	font-weight: bold;
+}
+
+#formCreateTask .inputWraper p svg {
+	width: 1rem;
+}
+
+#formCreateTask .inputWraper input,
+#formCreateTask button{
+	height: 2rem;
+	border-radius: 8px;
+	border: 1px solid #097d57;
+	outline: 1px solid #097d57;
+	padding-inline: 1rem;
+	background-color: #105642;
+	color: #fff;
+}
+
+#formCreateTask .inputWraper input::placeholder,
+#formCreateTask {
+	color: #369d79;
+}
+
+#formCreateTask .formDateHour{
+	display: flex;
+	gap: 0.5rem;
+}
+
+#formCreateTask .formDateHour .inputWraper {
+	width: 100%;
+}
+
+#formCreateTask .formDateHour input[type="time"]::-webkit-calendar-picker-indicator,
+#formCreateTask .formDateHour input[type="date"]::-webkit-calendar-picker-indicator {
+	filter: invert(1);
+}
+
+#formCreateTask button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	background-color: #009966;
+	color: #fff;
+}
+
+#formCreateTask button svg {
+	width: 1.5rem;
+}

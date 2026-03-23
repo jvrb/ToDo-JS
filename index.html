@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ToDo Lis JS</title>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>📝 Lista de Tarefas</h1>
+				<p>Organize suas tarefas de forma simples e eficiente</p>
+			</header>
+			<section id="sectionForm">
+				<form id="formCreateTask">
+					<header>
+						<p>
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 20 20">
+								<!-- Icon from Pepicons by CyCraft - https://github.com/CyCraft/pepicons/blob/dev/LICENSE -->
+								<g fill="currentColor">
+									<path d="M5 11a1 1 0 1 1 0-2h10a1 1 0 1 1 0 2H5Z" />
+									<path d="M9 5a1 1 0 0 1 2 0v10a1 1 0 1 1-2 0V5Z" />
+								</g>
+							</svg>
+							Nova Tarefa
+						</p>
+					</header>
+					<div class="inputWraper">
+						<p>Nome da Tarefa</p>
+						<input type="text" placeholder="Digite o nome da tarefa..." name="nameTask" id="nameTask" required />
+					</div>
+					<div class="inputWraper">
+						<p>
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 20 20">
+								<!-- Icon from Pepicons by CyCraft - https://github.com/CyCraft/pepicons/blob/dev/LICENSE -->
+								<g fill="none">
+									<path
+										stroke="currentColor"
+										stroke-linecap="round"
+										stroke-width="2"
+										d="M2.979 2.636v-.003h.003a36.006 36.006 0 0 1 1.815-.115c1.46-.058 3.193-.05 4.48.142a.386.386 0 0 1 .21.117l7.754 7.753a.5.5 0 0 1 0 .708l-5.657 5.656a.5.5 0 0 1-.707 0L3.123 9.141a.386.386 0 0 1-.117-.21c-.192-1.287-.2-3.02-.142-4.48c.028-.722.073-1.359.115-1.815Z"
+									/>
+									<circle cx="7.435" cy="7.173" r="1" fill="currentColor" transform="rotate(-45 7.435 7.173)" />
+								</g>
+							</svg>
+							Categotia
+						</p>
+						<input type="text" placeholder="Ex.: Trabalho, Pessoal" name="categoryTask" id="categoryTask" required />
+					</div>
+					<div class="formDateHour">
+						<div class="inputWraper">
+							<p>
+								<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 20 20">
+									<!-- Icon from Pepicons by CyCraft - https://github.com/CyCraft/pepicons/blob/dev/LICENSE -->
+									<g fill="currentColor">
+										<path fill-rule="evenodd" d="M3 4h14a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm1 4v8h12V8H4Z" clip-rule="evenodd" />
+										<circle cx="6.5" cy="10.5" r="1.5" />
+										<circle cx="5.5" cy="4.5" r="1.5" />
+										<circle cx="14.5" cy="4.5" r="1.5" />
+									</g>
+								</svg>
+								Data
+							</p>
+							<input type="date" name="dateTask" id="dateTask" required />
+						</div>
+						<div class="inputWraper">
+							<p>
+								<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 20 20">
+									<!-- Icon from Pepicons by CyCraft - https://github.com/CyCraft/pepicons/blob/dev/LICENSE -->
+									<g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+										<path d="M10 5.5a5.5 5.5 0 1 0 0 11a5.5 5.5 0 0 0 0-11ZM2.5 11a7.5 7.5 0 1 1 15 0a7.5 7.5 0 0 1-15 0Z" />
+										<path
+											d="M2.793 18.207a1 1 0 0 0 1.414 0l1.5-1.5a1 1 0 1 0-1.414-1.414l-1.5 1.5a1 1 0 0 0 0 1.414Zm11.5-2.914a1 1 0 0 1 1.414 0l1.5 1.5a1 1 0 0 1-1.414 1.414l-1.5-1.5a1 1 0 0 1 0-1.414ZM10 7a1 1 0 0 1 1 1v3a1 1 0 1 1-2 0V8a1 1 0 0 1 1-1Z"
+										/>
+										<path
+											d="M14 11a1 1 0 0 1-1 1h-3a1 1 0 1 1 0-2h3a1 1 0 0 1 1 1ZM6.332 3.172L2.574 6.76s-.077-.07-.19-.198c-.257-.292-.697-.881-.821-1.601c-.113-.654.035-1.417.818-2.165c.783-.747 1.551-.86 2.2-.717c.713.157 1.281.624 1.561.894c.123.118.19.199.19.199Zm7.336 0l3.758 3.588s.077-.07.19-.198c.257-.292.697-.881.821-1.601c.113-.654-.035-1.417-.818-2.165c-.783-.747-1.551-.86-2.2-.717c-.713.157-1.281.624-1.561.894c-.123.118-.19.199-.19.199Z"
+										/>
+									</g>
+								</svg>
+								Hora
+							</p>
+							<input type="time" name="hourTask" id="hourTask" required />
+						</div>
+					</div>
+					<button type="submit">
+						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 20 20">
+							<!-- Icon from Pepicons by CyCraft - https://github.com/CyCraft/pepicons/blob/dev/LICENSE -->
+							<g fill="currentColor">
+								<path d="M5 11a1 1 0 1 1 0-2h10a1 1 0 1 1 0 2H5Z" />
+								<path d="M9 5a1 1 0 0 1 2 0v10a1 1 0 1 1-2 0V5Z" />
+							</g>
+						</svg>
+						Adicionar Tarefa
+					</button>
+				</form>
+			</section>
+			<section id="taskList">
+				<header>
+					<div>
+						<p>Minhas Tarefas</p>
+						<div id="conditionTask">
+							<p>Total: <span>2</span></p>
+							<p>Pendentes: <span>1</span></p>
+							<p>Concluídas: <span>1</span></p>
+						</div>
+					</div>
+					<div>
+						<input type="date" id="selectDateNow" name="selectDateNow">
+					</div>
+				</header>
+				<section id="taskItem"></section>
+			</section>
+		</div>
+
+		<div id="editTask">
+			<div class="cardEdit">
+				<span id="taskId" style="display: none"></span>
+				<input type="checkbox" disabled />
+				<div class="cardBody">
+					<div class="editWraper">
+						<label for="editNameTask">Nome da Tarefa</label>
+						<input type="text" name="editNameTask" id="editNameTask" />
+					</div>
+					<div class="editDateHour">
+						<div class="editWraper">
+							<label for="editCategory">Categoria da Tarefa</label>
+							<input type="text" name="editeCategory" id="editCategory" />
+						</div>
+						<div class="editWraper">
+							<label for="editDate">Data da Tarefa</label>
+							<input type="date" name="editDate" id="editDate" />
+						</div>
+						<div class="editWraper">
+							<label for="editHour">Hora da Tarefa</label>
+							<input type="time" name="editHour" id="editHour" />
+						</div>
+					</div>
+				</div>
+				<button id="btnSave">
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 20 20">
+						<!-- Icon from Pepicons by CyCraft - https://github.com/CyCraft/pepicons/blob/dev/LICENSE -->
+						<g fill="currentColor">
+							<path d="m15.374 5.986l-5 9c-.647 1.165-2.396.194-1.748-.972l5-9c.647-1.165 2.396-.194 1.748.972Z" />
+							<path d="m5.125 9.72l5 4c1.04.832-.209 2.394-1.25 1.56l-5-4c-1.04-.832.209-2.394 1.25-1.56Z" />
+						</g>
+					</svg>
+				</button>
+				<button id="btnRemove">
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 20 20">
+						<!-- Icon from Pepicons by CyCraft - https://github.com/CyCraft/pepicons/blob/dev/LICENSE -->
+						<g fill="currentColor">
+							<path d="M11.937 4.5H8.062A2.003 2.003 0 0 1 10 2a2.003 2.003 0 0 1 1.937 2.5Z" />
+							<path d="M4.5 5.5a1 1 0 0 1 0-2h11a1 1 0 1 1 0 2h-11Z" />
+							<path
+								fill-rule="evenodd"
+								d="M14.5 18.5a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1v10.5a1 1 0 0 0 1 1h9Zm-2-10a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7ZM10 8a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 1 0v-7A.5.5 0 0 0 10 8Zm-3.5.5a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7Z"
+								clip-rule="evenodd"
+							/>
+						</g>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</body>
+</html>

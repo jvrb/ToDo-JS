@@ -1,0 +1,28 @@
+{
+  "task": [
+    {
+      "id": "1774234458435",
+      "name": "Comprar Frango",
+      "category": "Compra",
+      "date": "2026-03-23",
+      "hour": "12:00",
+      "completed": false
+    },
+    {
+      "id": "1774244009281",
+      "name": "Comprar Frango",
+      "category": "Compra",
+      "date": "2026-03-23",
+      "hour": "02:35",
+      "completed": false
+    },
+    {
+      "id": "1774244811291",
+      "name": "Busca Busca",
+      "category": "Compra",
+      "date": "2026-03-26",
+      "hour": "10:00",
+      "completed": false
+    }
+  ]
+}
