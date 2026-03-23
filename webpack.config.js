@@ -1,6 +1,8 @@
 const path = require("path"); // Caminho do arquivo
 const HtmlWebPackPlugin = require("html-webpack-plugin"); // Plugin para html do webpack
 const CopyWebPackPlugin = require("copy-webpack-plugin"); // Plugin para o css do webpoack
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+
 
 module.exports = {
 	target: "web",
@@ -32,12 +34,18 @@ module.exports = {
 				},
 			],
 		}),
+		new MiniCssExtractPlugin({
+			filename: "styles.css"
+		})
 	],
 	module: {
 		rules: [
 			{
 				test: /\.css$/,
-				use: ["style-loader", "css-loader"],
+				use: [
+					MiniCssExtractPlugin.loader,
+					"css-loader"
+				],
 			},
             {
                 test: /\.js$/,
