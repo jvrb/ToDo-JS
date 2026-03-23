@@ -1,19 +1,17 @@
 import { loadTask } from "../modules/taskList/load-task";
-import { apiConfig } from "./api-config";
-import { taskListByDate } from "./task-list-by-date";
+import { getTask, setTasks } from "./api-config";
 
 export async function deleteTask(id) {
 	try {
 
-		const nowDate = await taskListByDate({ id })
-
-		await fetch(`${apiConfig.baseUrl}/task/${id}`, {
-			method: "DELETE",
-		});
-	
+		const data = getTask()
+		const nowDate = data.filter((d) => d.id === id)
+		const updateTask = data.filter((d) => d.id !== id)
+		setTasks(updateTask)
 		loadTask({date: nowDate.date})
+
 	} catch (error) {
 		alert("Não foi possivel deletar essa tarefa");
-		console.log("Não foi possivel deletar essa tarefa");
+		console.log(error);
 	}
 }

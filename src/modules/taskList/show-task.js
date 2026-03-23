@@ -36,8 +36,6 @@ export async function showTask({listTask}) {
 	conditionTask.append(total, pendent, pCompleted)
 
 	const nowDate = new Date().toISOString().split("T")[0]
-	console.log(nowDate)
-
 
 	taskItemHtml.innerHTML = ""
 
