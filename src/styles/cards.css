@@ -141,3 +141,53 @@
 	color: #c94f51;
 }
 
+@media (max-width: 720px) {
+	#taskList {
+		max-width: 200px;
+	}
+	#taskList > header {
+		flex-direction: column;
+	}
+	.card{
+		display: grid;
+		grid-template-areas: "check description"
+							 "button button";
+		grid-template-columns: auto 1fr;
+	}
+	.card > input[type="checkbox"] {
+		grid-area: check;
+	}
+	.card .cardbody {
+		grid-area: description;
+		width: 100%;
+	}
+
+	.card .actions {
+		grid-area: button;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.card .actions button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 1;
+	}
+
+	.card .actions .btnEdit {
+		background-color: rgba(1, 169, 247, 0.19)!important;
+	}
+
+	.card .actions .btnRemove {
+		background-color: rgba(247, 1, 1, 0.19)!important;
+	}
+
+	.cardEdit {
+		max-width: 100%;
+	}
+
+	#editTask {
+		width: 100%;
+	}
+}

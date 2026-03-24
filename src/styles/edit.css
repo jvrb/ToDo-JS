@@ -1,19 +1,19 @@
 #editTask {
-    position: absolute;
-    z-index: -999;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    opacity: 0;
+	position: fixed;
+	z-index: -999;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(10px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	opacity: 0;
 }
 
 #editTask .cardEdit {
-    display: grid;
+	display: grid;
 	grid-template-columns: auto 1fr auto auto;
 	align-items: center;
 	gap: 1rem;
@@ -24,18 +24,18 @@
 }
 
 #editTask .cardEdit .editWraper {
-    display: flex;
-    flex-direction: column;
-    gap: .2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
 }
 
 #editTask .cardEdit .editWraper label {
-    font-weight: bold;
-    color: #fff;
+	font-weight: bold;
+	color: #fff;
 }
 
 #editTask .cardEdit .editWraper input {
-    height: 2rem;
+	height: 2rem;
 	border-radius: 8px;
 	border: 1px solid #097d57;
 	outline: 1px solid #097d57;
@@ -45,45 +45,60 @@
 }
 
 #editTask .cardEdit .editWraper input[type="date"]::-webkit-calendar-picker-indicator,
-#editTask .cardEdit .editWraper input[type="time"]::-webkit-calendar-picker-indicator{
-    filter: invert(1);
+#editTask .cardEdit .editWraper input[type="time"]::-webkit-calendar-picker-indicator {
+	filter: invert(1);
 }
 
 #editTask .cardEdit .cardBody {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
 }
 
 #editTask .cardEdit .cardBody .editDateHour {
-    display: flex;
-    gap: .5rem;
+	display: flex;
+	gap: 0.5rem;
 }
 
 #editTask .cardEdit button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    border: none;
-    padding: 0.5rem;
-    border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent;
+	border: none;
+	padding: 0.5rem;
+	border-radius: 8px;
 }
 
-#editTask .cardEdit button#btnSave{
-    background-color: #097d57;
-    color: #fff;
+#editTask .cardEdit button#btnSave {
+	background-color: #097d57;
+	color: #fff;
 }
 
-#editTask .cardEdit button#btnSave:hover{
-    background-color: #10a372;
+#editTask .cardEdit button#btnSave:hover {
+	background-color: #10a372;
 }
 
-#editTask .cardEdit button#btnRemove{
-    background-color: #fb6365;
-    color: #fff;
+#editTask .cardEdit button#btnRemove {
+	background-color: #fb6365;
+	color: #fff;
 }
 
-#editTask .cardEdit button#btnRemove:hover{
-    background-color: #b34849;
+#editTask .cardEdit button#btnRemove:hover {
+	background-color: #b34849;
+}
+
+@media (max-width: 720px) {
+	#editTask {
+		position: fixed;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+	}
+	#editTask .cardEdit {
+		grid-template-columns: 1fr;
+	}
+	#editTask .cardEdit .cardBody .editDateHour {
+		flex-direction: column;
+	}
 }

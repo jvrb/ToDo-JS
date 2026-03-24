@@ -18,7 +18,8 @@
 	align-items: center;
 }
 
-#formCreateTask .inputWraper , #editTask .inputWraper{
+#formCreateTask .inputWraper,
+#editTask .inputWraper {
 	display: flex;
 	flex-direction: column;
 	gap: 0.2rem;
@@ -39,7 +40,7 @@
 }
 
 #formCreateTask .inputWraper input,
-#formCreateTask button{
+#formCreateTask button {
 	height: 2rem;
 	border-radius: 8px;
 	border: 1px solid #097d57;
@@ -54,7 +55,7 @@
 	color: #369d79;
 }
 
-#formCreateTask .formDateHour{
+#formCreateTask .formDateHour {
 	display: flex;
 	gap: 0.5rem;
 }
@@ -79,4 +80,14 @@
 
 #formCreateTask button svg {
 	width: 1.5rem;
+}
+
+@media (max-width: 720px) {
+	#formCreateTask {
+		width: 100px;
+	}
+
+	#sectionForm {
+		width: 100%;
+	}
 }

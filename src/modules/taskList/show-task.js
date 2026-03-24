@@ -105,6 +105,9 @@ export async function showTask({listTask}) {
 	divDateHour.append(spanIconDateHour, spanCategory, pDate, spanAs, hourSpan);
 	divBodyCard.appendChild(divDateHour);
 
+	const divAction = document.createElement("div")
+	divAction.className = "actions"
+
 	const buttonEdit = document.createElement("button");
 	buttonEdit.className = "btnEdit";
 	buttonEdit.innerHTML = `
@@ -144,7 +147,9 @@ export async function showTask({listTask}) {
     `;
 	buttonRemove.addEventListener("click", () => deleteTask(task.id))
 
-	sectionTaskItem.append(divBodyCard, buttonEdit, buttonRemove);
+	divAction.append(buttonEdit, buttonRemove)
+
+	sectionTaskItem.append(divBodyCard, divAction);
 
 	taskItemHtml.append(sectionTaskItem);
 });
