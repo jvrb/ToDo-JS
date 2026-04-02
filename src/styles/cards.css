@@ -97,7 +97,7 @@
 	height: 1rem;
 }
 
-.card div {
+.card .cardBody {
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
@@ -132,6 +132,11 @@
 	height: 1.5rem;
 }
 
+.card .actions {
+	display: flex;
+	gap: 1rem;
+}
+
 .completed {
 	background-color: #690808;
 	border: 1px solid #fa0000;
@@ -148,39 +153,42 @@
 	#taskList > header {
 		flex-direction: column;
 	}
-	.card{
+	.card {
 		display: grid;
-		grid-template-areas: "check description"
-							 "button button";
+		grid-template-areas:
+			"check description"
+			"button button";
 		grid-template-columns: auto 1fr;
 	}
 	.card > input[type="checkbox"] {
 		grid-area: check;
 	}
-	.card .cardbody {
+	.card .cardBody {
 		grid-area: description;
+		display: flex;
+		flex-direction: column;
 		width: 100%;
 	}
 
 	.card .actions {
 		grid-area: button;
+		width: 100%;
 		display: flex;
 		flex-direction: row;
 	}
 
 	.card .actions button {
-		display: flex;
 		align-items: center;
 		justify-content: center;
 		flex: 1;
 	}
 
 	.card .actions .btnEdit {
-		background-color: rgba(1, 169, 247, 0.19)!important;
+		background-color: rgba(1, 169, 247, 0.19) !important;
 	}
 
 	.card .actions .btnRemove {
-		background-color: rgba(247, 1, 1, 0.19)!important;
+		background-color: rgba(247, 1, 1, 0.19) !important;
 	}
 
 	.cardEdit {
